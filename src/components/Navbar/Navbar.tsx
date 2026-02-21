@@ -77,12 +77,7 @@ import { CartRes } from "@/interfaces/CartInterfaces";
                     <Link href={"/profile"}>
                       <DropdownMenuItem>Profile</DropdownMenuItem>
                     </Link>
-                    <Link href={"/wishlist"}>
-                      <DropdownMenuItem>Wishlist</DropdownMenuItem>
-                    </Link>
-                    <Link href={"/allorders"}>
-                      <DropdownMenuItem>MyOrder</DropdownMenuItem>
-                    </Link>
+                    
                       <Logout/>
                       </> 
                       :
@@ -101,10 +96,7 @@ import { CartRes } from "@/interfaces/CartInterfaces";
               </DropdownMenu>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="">
-                  {
-                    session && data &&
-                    <CartIcon serverCartNum={data?.numOfCartItems} cartId={data.data.cartOwner}/>
-                  }
+        
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>

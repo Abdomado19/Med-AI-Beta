@@ -55,12 +55,12 @@ export default function LoginForm() {
       email: data.email,
       password: data.password,
       redirect: true,
-      callbackUrl:redirectURL ? redirectURL :  "/products",
+      callbackUrl:redirectURL ? redirectURL :  "/chat",
       
     })
     if (response?.ok) {
       toast.success("Success Login")
-      router.push("/products")
+      router.push("/chat")
     }else {
       toast.error(response?.error + "")
     }
